@@ -1,25 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { Photo } from "src/types";
+import closeIcon from "./close.png";
+import styles from "./styles.module.css";
 
 type PhotoGridProps = {
   photos: Photo[];
 };
 
 const PhotoGrid: React.FC<PhotoGridProps> = ({ photos }) => {
+  const [closedPhotos, setClosedPhoto] = useState<number[]>([]);
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr 1fr 1fr",
-        alignContent: "space-around",
-        justifyContent: "space-around"
-      }}
-    >
-      {photos.map(({ thumbnailUrl }) => {
+    <div className={styles.photoGridContainer}>
+      {photos.map(({ title, thumbnailUrl, id }) => {
         return (
-          <div style={{ padding: "10px 0" }}>
-            <img src={thumbnailUrl} />
-          </div>
+          closedPhotos.indexOf(id) === -1 && (
+            <div key={id}>
+              <span className={styles.photoThumbnail}>
+                <img src={thumbnailUrl} alt={"Thumbnail view"} />
+                <img
+                  alt={"Remove  Button"}
+                  className={styles.photoCloseIcon}
+                  src={closeIcon}
+                  onClick={() => {
+                    setClosedPhoto(existingClosedPhotos => [
+                      ...existingClosedPhotos,
+                      id
+                    ]);
+                  }}
+                />
+                <span className={styles.photoTitleText}>{title}</span>
+              </span>
+            </div>
+          )
         );
       })}
     </div>

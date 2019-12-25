@@ -6,7 +6,7 @@ export type Album = {
 
 export type Photo = {
   albumId: string;
-  id: string;
+  id: number;
   title: string;
   url: string;
   thumbnailUrl: string;

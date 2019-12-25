@@ -6,7 +6,6 @@ type PanelProps = {
   renderContent?: () => React.ReactNode;
   displayContent?: boolean;
   onClick?: () => void;
-  showCloseButton?: boolean;
 };
 
 const Panel: React.FC<PanelProps> = ({

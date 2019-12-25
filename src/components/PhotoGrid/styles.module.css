@@ -1,0 +1,32 @@
+.photoGridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.photoThumbnail {
+    padding: 10px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.photoCloseIcon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 3px;
+    right: -7px;
+    cursor: pointer;
+}
+
+.photoTitleText {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: none;
+}
+
+.photoThumbnail:hover .photoTitleText {
+    display: inline;
+}

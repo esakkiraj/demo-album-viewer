@@ -15,6 +15,7 @@
     align-items: center;
     background: #cccccc;
     font-size: 24px;
+    cursor: pointer;
 }
 
 .panelHeaderText {
