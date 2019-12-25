@@ -1,4 +1,4 @@
-import Collapse, { CollapseProps } from "./Collapse";
-import Panel, { PanelProps } from "./Panel";
+import Collapse from "./Collapse";
+import Panel from "./Panel";
 
-export { Collapse, CollapseProps, Panel, PanelProps };
+export { Collapse, Panel };

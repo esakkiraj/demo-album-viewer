@@ -1,0 +1,28 @@
+.collpaseContainer {
+    margin: 0 auto;
+    width: 90%
+}
+
+.panelContainer {
+    background-color: lightgrey;
+    margin: 5px 0;
+}
+
+.panelHeaderWrapper {
+    display: flex;
+    height: 65px;
+    padding: 0 10px;
+    align-items: center;
+    background: #cccccc;
+    font-size: 24px;
+}
+
+.panelHeaderText {
+    display: inline-block;
+    width: 95%;
+    text-align: left
+}
+
+.panelContent {
+    background-color: #ececec
+}
